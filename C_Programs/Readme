@@ -1,0 +1,50 @@
+Learn to code string manipulation functions present in the Linux source code as reference.
+
+As begining we will try to learn and hack how linux has implemented ToLower and ToUpper string funtion.
+
+ToLower : Convert given string to lower case.
+	  e.g :- VINAY --> vinay
+
+ToUpper: Convert given string to Upper case.
+	 e.g hunachyal --> HUNACHYAL
+
+
+source code:./include/linux/ctype.h
+		vi ./lib/ctype.c
+		vi lib/string.c 
+
+For the simplication and better understanding i have reorganised code and get source code from github.
+
+
+
+
+unsigned char:
+
+char:- a single byte, capable of holding one character in the local character set.
+
+The qualifier signed or unsigned may be applied to char or any integer. 
+unsigned numbers are always positive or zero . So, for instance, if chars are 8 bits, unsigned char variables have values
+between 0 and 255, while signed chars have values between -128 and 127 (in a two's
+complement machine.) 
+Whether plain chars are signed or unsigned is machine-dependent, but printable characters are always positive.
+
+A Unsigned character variable holds ASCII value (an integer number between 0 and 255) rather than that character itself in C
+
+signed char, which gives you at least the -127 to 127 range. (-128 to 127 is common)
+unsigned char, which gives you at least the 0 to 255 range.
+
+
+
+static inline:
+
+inline::
+
+Inline functions are those functions whose definition is small and can be substituted or embedded at the place where its function call is made. 
+Basically they are inlined with its function call.
+
+Even there is no guarantee that the function will actually be inlined. Compiler interprets the inline keyword as a mere hint or request to substitute the code of function into its function call. 
+Usually people say that having an inline function increases performance by saving time of function call overhead (i.e. passing arguments variables, return address, return value, stack mantle and its dismantle, etc.) 
+Compiler does inlining for performing optimizations. If compiler optimization has been disabled, then inline functions would not serve their purpose and their function call would not be replaced by their function definition.
+
+
+static ::
